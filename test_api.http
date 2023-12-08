@@ -1,0 +1,75 @@
+POST http://localhost:8000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "test",
+    "email": "test@gmail.com",
+    "password": "admin12345",
+    "name": "John Doe"
+}
+
+###
+POST http://localhost:8000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "admin12345"
+}
+
+###
+POST http://localhost:8000/api/auth/logout
+
+###
+GET http://localhost:8000/api/posts?userId=undefined 
+
+
+###
+POST http://localhost:8000/api/posts
+Content-Type: application/json
+
+{
+    "desc":"hello world testing"
+}
+
+
+###
+GET http://localhost:8000/api/comments
+
+###
+POST http://localhost:8000/api/comments
+Content-Type: application/json
+
+{
+    "desc": "what is your name",
+    "postId": 18
+}
+
+###
+GET http://localhost:8000/api/likes?postId=2
+
+###
+POST http://localhost:8000/api/likes
+Content-Type: application/json
+
+{
+    "postId": 2
+}
+
+###
+GET http://localhost:8000/api/users/find/1
+
+###
+GET http://localhost:8000/api/relationships?followedUserId=1
+
+###
+PUT http://localhost:8000/api/users
+
+###
+Get http://localhost:8000/api/users?userId=1
+
+###
+Get http://localhost:8000/api/users/getfirends?userId=1
+
+###
+GET http://localhost:8000/api/relationships/followerUserId=2
